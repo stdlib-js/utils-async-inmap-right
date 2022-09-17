@@ -22,7 +22,7 @@
 
 var tape = require( 'tape' );
 var noop = require( '@stdlib/utils-noop' );
-var inmapRightAsync = require( './../lib/inmap_right.js' );
+var inmapRightAsync = require( './../lib' );
 
 
 // TESTS //
