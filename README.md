@@ -438,9 +438,9 @@ inmapRightAsync( files, read, done );
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/utils/async/for-each-right`][@stdlib/utils/async/for-each-right]</span><span class="delimiter">: </span><span class="description">invoke a function once for each element in a collection, iterating from right to left.</span>
--   <span class="package-name">[`@stdlib/utils/async/inmap`][@stdlib/utils/async/inmap]</span><span class="delimiter">: </span><span class="description">invoke a function for each element in a collection and update the collection in-place.</span>
--   <span class="package-name">[`@stdlib/utils/inmap-right`][@stdlib/utils/inmap-right]</span><span class="delimiter">: </span><span class="description">invoke a function for each element in a collection and update the collection in-place, iterating from right to left.</span>
+-   <span class="package-name">[`@stdlib/utils-async/for-each-right`][@stdlib/utils/async/for-each-right]</span><span class="delimiter">: </span><span class="description">invoke a function once for each element in a collection, iterating from right to left.</span>
+-   <span class="package-name">[`@stdlib/utils-async/inmap`][@stdlib/utils/async/inmap]</span><span class="delimiter">: </span><span class="description">invoke a function for each element in a collection and update the collection in-place.</span>
+-   <span class="package-name">[`@stdlib/utils-inmap-right`][@stdlib/utils/inmap-right]</span><span class="delimiter">: </span><span class="description">invoke a function for each element in a collection and update the collection in-place, iterating from right to left.</span>
 
 </section>
 
