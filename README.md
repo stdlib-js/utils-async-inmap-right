@@ -18,6 +18,17 @@ limitations under the License.
 
 -->
 
+
+<details>
+  <summary>
+    About stdlib...
+  </summary>
+  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
+  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
+  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
+  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
+</details>
+
 # inmapRightAsync
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
@@ -34,38 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-async-inmap-right
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-inmapRightAsync = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-inmap-right@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var inmapRightAsync = require( 'path/to/vendor/umd/utils-async-inmap-right/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-inmap-right@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.inmapRightAsync;
-})();
-</script>
+var inmapRightAsync = require( '@stdlib/utils-async-inmap-right' );
 ```
 
 #### inmapRightAsync( collection, \[options,] fcn, done )
@@ -154,9 +157,9 @@ inmapRightAsync( arr, fcn, done );
 
 The function accepts the following `options`:
 
--   `limit`: the maximum number of pending invocations at any one time. Default: `infinity`.
--   `series`: `boolean` indicating whether to sequentially invoke `fcn` for each `collection` element. If `true`, the function sets `options.limit=1`. Default: `false`.
--   `thisArg`: the execution context for `fcn`.
+-   **limit**: the maximum number of pending invocations at any one time. Default: `infinity`.
+-   **series**: boolean indicating whether to sequentially invoke `fcn` for each `collection` element. If `true`, the function sets `options.limit=1`. Default: `false`.
+-   **thisArg**: the execution context for `fcn`.
 
 By default, all elements are processed concurrently, which means that the function does **not** guarantee completion order. To process each `collection` element sequentially, set the `series` option to `true`.
 
@@ -274,10 +277,10 @@ function done( error, collection ) {
 
 When invoked, `fcn` is provided a maximum of four arguments:
 
--   `value`: collection value.
--   `index`: collection index.
--   `collection`: the input `collection`.
--   `next`: a callback which should be called once `fcn` has finished processing a collection `value`.
+-   **value**: collection value.
+-   **index**: collection index.
+-   **collection**: the input `collection`.
+-   **next**: a callback which should be called once `fcn` has finished processing a collection `value`.
 
 The actual number of provided arguments depends on function `length`. If `fcn` accepts two arguments, `fcn` is provided `value` and `next`. If `fcn` accepts three arguments, `fcn` is provided `value`, `index`, and `next`. For every other `fcn` signature, `fcn` is provided all four arguments.
 
@@ -318,7 +321,7 @@ inmapRightAsync( arr, fcn, done );
 
 #### inmapRightAsync.factory( \[options,] fcn )
 
-Returns a `function` which invokes a function once for each element in a `collection`, iterating from right to left.
+Returns a function which invokes a function once for each element in a `collection`, iterating from right to left.
 
 ```javascript
 function fcn( value, index, next ) {
@@ -391,12 +394,7 @@ The function accepts the same `options` as `inmapRightAsync()`.
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript">
-(function () {
+```javascript
 var resolve = require( 'path' ).resolve;
 var readFile = require( '@stdlib/fs-read-file' );
 var inmapRightAsync = require( '@stdlib/utils-async-inmap-right' );
@@ -429,11 +427,6 @@ function read( file, next ) {
 }
 
 inmapRightAsync( files, read, done );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -541,11 +534,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/utils/async/for-each-right]: https://github.com/stdlib-js/utils-async-for-each-right/tree/umd
+[@stdlib/utils/async/for-each-right]: https://github.com/stdlib-js/utils-async-for-each-right
 
-[@stdlib/utils/async/inmap]: https://github.com/stdlib-js/utils-async-inmap/tree/umd
+[@stdlib/utils/async/inmap]: https://github.com/stdlib-js/utils-async-inmap
 
-[@stdlib/utils/inmap-right]: https://github.com/stdlib-js/utils-inmap-right/tree/umd
+[@stdlib/utils/inmap-right]: https://github.com/stdlib-js/utils-inmap-right
 
 <!-- </related-links> -->
 
