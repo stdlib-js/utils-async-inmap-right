@@ -52,13 +52,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import inmapRightAsync from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-inmap-right@deno/mod.js';
+import inmapRightAsync from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-inmap-right@v0.1.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-inmap-right@deno/mod.js';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-inmap-right@v0.1.0-deno/mod.js';
 ```
 
 #### inmapRightAsync( collection, \[options,] fcn, done )
@@ -387,7 +387,7 @@ The function accepts the same `options` as `inmapRightAsync()`.
 ```javascript
 var resolve = require( 'path' ).resolve;
 import readFile from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-file@deno/mod.js';
-import inmapRightAsync from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-inmap-right@deno/mod.js';
+import inmapRightAsync from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-inmap-right@v0.1.0-deno/mod.js';
 
 var files = [
     resolve( __dirname, 'package.json' ),
