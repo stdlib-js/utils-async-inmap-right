@@ -52,13 +52,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import inmapRightAsync from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-inmap-right@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/utils-async-inmap-right/tags). For example,
+
+```javascript
 import inmapRightAsync from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-inmap-right@v0.2.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-inmap-right@v0.2.0-deno/mod.js';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-inmap-right@deno/mod.js';
 ```
 
 #### inmapRightAsync( collection, \[options,] fcn, done )
@@ -387,7 +392,7 @@ The function accepts the same `options` as `inmapRightAsync()`.
 ```javascript
 var resolve = require( 'path' ).resolve;
 import readFile from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-file@deno/mod.js';
-import inmapRightAsync from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-inmap-right@v0.2.0-deno/mod.js';
+import inmapRightAsync from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-inmap-right@deno/mod.js';
 
 var files = [
     resolve( __dirname, 'package.json' ),
